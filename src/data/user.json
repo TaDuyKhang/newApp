@@ -1,0 +1,10 @@
+
+{
+    "user":
+        [
+            {"username":"khang", "password":"123456", "age":"23", "email":"khang@gmail.com"},
+            {"username":"duong", "password":"1324567", "age":"23", "email":"duong@gmail.com"},
+            {"username":"phuong", "password":"13245678", "age":"23", "email":"phuong@gmail.com"}
+        ]
+    
+}
