@@ -21,11 +21,6 @@ import { Component, useState } from "react";
 
 function App() {
   const isAuthUser = useSelector((state) => state.userData.isAuthUser);
-  const [data, setData] = useState();
-  const loginData = (passData) => {
-    console.log(passData);
-    setData(passData);
-  };
 
   function PrivateRoute({ component: Component, ...rest }) {
     return (

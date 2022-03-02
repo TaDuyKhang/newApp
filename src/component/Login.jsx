@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Login, changeToken } from "../store/slice/userData";
 
-function LoginPage(props) {
+function LoginPage() {
   const [userName, setUserName] = useState("");
   const [passWord, setPassWord] = useState("");
 
@@ -17,8 +17,7 @@ function LoginPage(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // const passData = { username: userName, passwork: passWord };
-    // props.passData(passData);
+
     postData("http://134.209.182.27:5001/auth/log-in", {
       // email: "devkimal@b13technology.com",
       // password: "12345678910111213",
@@ -49,27 +48,6 @@ function LoginPage(props) {
     });
     return response.json(); // parses JSON response into native JavaScript objects
   }
-
-  // const login = () => {
-  //   const jwt = checkLogin(userName, passWord);
-  //   if (jwt) {
-  //     dispatch(changeToken(jwt));
-  //     setData(getUserData(jwt));
-  //   } else {
-  //     alert("sai thong tin");
-  //   }
-  //   console.log("jwt", jwt);
-  // };
-
-  // useEffect(() => {
-  //   if (data) {
-  //     console.log("Login success");
-  //     dispatch(Login(data));
-  //     history.push("admin");
-  //   } else {
-  //     console.log("wrong");
-  //   }
-  // }, [data]);
 
   return (
     <form className="Login_form" onSubmit={handleSubmit}>
